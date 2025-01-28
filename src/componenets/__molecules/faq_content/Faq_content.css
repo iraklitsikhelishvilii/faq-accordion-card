@@ -1,0 +1,24 @@
+.Faq_content_main{
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    margin-top: 65px;
+}
+.Faq_content_box{
+    display: flex;
+    gap: 18px;
+    flex-direction: column;
+}
+h1{
+color: #1E1F36;
+font-size: 32px;
+font-weight: 700;
+}
+@media(max-width:750px){
+    .Faq_content_main{
+        align-items: center;
+    }
+    .Faq_content_main{
+        margin-top: 132px;
+    }
+}
