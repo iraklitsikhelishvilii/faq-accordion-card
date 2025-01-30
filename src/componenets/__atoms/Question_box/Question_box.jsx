@@ -1,26 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 import "../Question_box/Question_box.css";
 import arrow_img from "../../../assets/images/Path2.svg";
 
-function Question_box({ author, quote }) {
-  const [Lengthened, setLengthened] = useState(false);
-  const [bold, setbold] = useState(false);
-  const [rotate, setrotate] = useState(false);
-  const click = () => {
-    setLengthened(!Lengthened);
-    setbold(!bold);
-    setrotate(!rotate);
-  };
+function Question_box({ author, quote, isExpanded, onClick }) {
   return (
     <>
       <div
-        onClick={click}
-        className={`question_box ${Lengthened ? "lengthened" : ""}`}
+        onClick={onClick}
+        className={`question_box ${isExpanded ? "lengthened" : ""}`}
       >
         <div className="question_box_heading">
-          <h2 className={`${bold ? "bold" : ""}`}>{author}</h2>
+          <h2 className={`${isExpanded ? "bold" : ""}`}>{author}</h2>
           <img
-            className={`arrow_img ${rotate ? "rotate" : ""}`}
+            className={`arrow_img ${isExpanded ? "rotate" : ""}`}
             src={arrow_img}
             alt="Arrow Icon"
           />
